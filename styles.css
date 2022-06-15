@@ -1,0 +1,25 @@
+/*To do make tables*/
+body{
+  padding: 23px;
+}
+table{
+  width: 100%;
+}
+#submit{
+  padding: 23px;
+}
+caption{
+  font-size: 33px;
+  color: darkgreen;
+  font-style:bold;
+
+}
+th{
+  border: black solid 2px;
+  color:blueviolet;
+  font-size: 22px;
+  padding: 22px;
+
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
