@@ -15,7 +15,7 @@ var a = prompt("Enter column first Value", "Insert Min Col");
 var b = prompt("Enter column second Value", "Insert Max Col");
 var c = prompt("Enter row first Value", "Insert Min Row");
 var d = prompt("Enterrow second Value", "Insert Max Row");
-*/
+
 
 const a = document.getElementById('num1').value;
 let b = document.getElementById('num2').value;
@@ -27,54 +27,83 @@ var z = document.getElementById('num4');
 console.log(z);
 console.log(d);
 
+var button1 = document.getElementById("theButton1"),
+value =  button1.form.valueId.value;
+button1.onsubmit = function() {
+  multiplyTable1(value);
+}
+var button2 = document.getElementById("theButton2"),
+value =  button2.form.valueId.value;
+button2.onsubmit = function() {
+  multiplyTable1(value);
+}
+var button3 = document.getElementById("theButton3"),
+value =  button3.form.valueId.value;
+button3.onsubmit = function() {
+  multiplyTable1(value);
+}
+
+var button4 = document.getElementById("theButton4"),
+value =  button4.form.valueId.value;
+button4.onclick = function() {
+  multiplyTablex(value);
+}
+console.log(button4);
+
+function multiplyTablex(v){
+
+ console.log(v.value);
+}
+
+multiplyTablex(button4)
+
+/*
+console.log(button1.value);
+console.log(button2);
+console.log(button3);
+console.log(button4);
 
 
 
 
-
-function multiplyTable(num1,num2,num3,num4) {
-
-  tbody = document.querySelector('tbody');
-  result = '';
-  row = tbody.insertRow();
-  row.insertCell().textContent = '';//Leave first column empty
-  for (let y = num3; y <= num4; y++) {
-    
-    if (y === c) {
-      for (let x = num1; x <= num2; x++) {
-        row.insertCell().textContent = x;
-      }
-    }
-    row = tbody.insertRow();
-  
-    row.insertCell().textContent = y;
-    for (let x = num1; x <= num2; x++) {
-      row.insertCell().textContent = x * y;
-    }
-  }
   console.log('HELOOOOO');
 
 }
 
-console.log(num2);
-console.log(num3);
-console.log(num4);
+multiplyTable(button1,button2,button3, button4);
+console.log(document.getElementById('theButton1').value);
 
 
-
-multiplyTable(a,b,c,d);
-console.log(document.getElementById('num1').value);
+console.log(button1.value);
 
 
-console.log(num1.value);
+    function add(a, b, c, d) {
+      var sum = parseInt(a, 10) + parseInt(b, 10)
+       + parseInt(c, 10) + parseInt(d, 10);
+      alert(sum);
+    }*/
+  
+    function multiplyTable(a,b,c,d) {
 
+      tbody = document.querySelector('tbody');
+      result = '';
+      row = tbody.insertRow();
+      row.insertCell().textContent = '';//Leave first column empty
+      for (let y = c; y <= d; y++) {
+        
+        if (y === c) {
+          for (let x = a; x <= b; x++) {
+            row.insertCell().textContent = x;
+          }
+        }
+        row = tbody.insertRow();
+      
+        row.insertCell().textContent = y;
+        for (let x = a; x <= b; x++) {
+          row.insertCell().textContent = x * y;
+        }
+      }
+    }
+    multiplyTable();
 
-
-
-
-
-
-//To Do 
-
-
- 
+    

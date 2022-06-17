@@ -2,7 +2,7 @@
 
 #wrapper{
 	display:flex;
-	grid-template-columns: 250px 1fr;
+	grid--columns: 250px;
 }
 
 h2{
@@ -11,28 +11,7 @@ h2{
   height:200px;
 }
 
-.labels{
-  line-height: 14px;
-  padding: 45px;
-  background-color: rgb(255, 0, 98);  
-  margin: 20px;
-}
-.form1 > .para{
-  text-align: left;
-}
-.form1{
-  width: 50%;
 
-  vertical-align: left;
-
-  padding: 15px;
-  margin: 20px;
-  margin-right: 20px;
-  
-  border: 1px solid #ccc;
-  background-color: aqua;
-
-}
 tr:nth-child(even) {  
   background-color:#51b39a;  
 }
@@ -41,21 +20,9 @@ table, th, td {
 
 
 }
-body{
-  padding: 23px;
-}
 
-#submit{
-  padding: 8px;
-  position: relativea;
-  align-items: center;
-}
-caption{
-  font-size: 33px;
-  color: darkgreen;
-  font-style:bold;
 
-}
+
 th{
   border: black solid 2px;
   color:blueviolet;
@@ -71,6 +38,7 @@ th{
   
 
 }
+
 tbody { display: block; 
     height: 200px;
     max-width: 950px;     

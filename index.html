@@ -23,14 +23,14 @@
                   
 
 
-                <!--Warning default value is still being used-->
+                <!--Warning default value is still being used
             <form class="form1" id="form1" action="" onsubmit="multiplyTable();return false">
                   <p class="para">Please enter the table ranges</p> 
 
                   <div class="labels">
 
                         <label for="num1">First row number: </label>
-                        <input type="number" name="num1" id="num1" value="3" required></input>
+                        <input type="number" name="num1" id="num1" value="3" ></input>
 
                         <label for="num2">Second row number: </label>
                         <input type="number" name="num2" id="num2" value="9"></input>
@@ -52,21 +52,66 @@
                   <input type="submit" id="submit" value="Submit"></input>
                   <output name="result"></output>
                 </div>
-            </form>
+            </form>  
 
-            <table class="myTable">
-                    <thead>
 
-                    </thead>
-                    <tbody>
-                      <script src="index.js"></script>
+            <form class="form1" id="form1" action="" onsubmit="multiplyTable();return false">
 
-                    </tbody>
-            </table> 
+              <input type="text" id="formValueId" name="valueId" />
+              <input type="button" id="theButton1"/>
+            
+              <input type="text" id="formValueId" name="valueId"/>
+              <input type="button" id="theButton2"/>
+
+                <input type="text" id="formValueId" name="valueId"/>
+                <input type="button" id="theButton3"/>
+
+                  <input type="text" id="formValueId" name="valueId"/>
+                  <input type="button" id="theButton4"/>
+
+                  <input type="submit" id="submit" value="Submit"></input>
+
+                  </form> -->
+
+                  
+                  
+<form action="" onsubmit="multiplyTable();return false">  
+  <label for="number">First Column Number: </label>
+   <input type="number" name="a" id="a" placeholder="1st row value" ><br>
+
+   <label for="number">Second Column number: </label>
+   <input type="number" name="b" id="b" placeholder="2nd column value" ><br>
+
+   <label for="number">First Row Number: </label>
+   <input type="number" name="c" id="c" placeholder="1st row value" ><br>
+
+   <label for="number">Second Row Number: </label>
+   <input type="number" name="d" id="d" placeholder="2nd row value"><br>
+
+  <button onclick="multiplyTable(document.getElementById('a').value,
+  document.getElementById('b').value,
+  document.getElementById('c').value,
+  document.getElementById('d').value)">Submit</button>
+</form> 
+      
+
+<table id="myTable">
+  <div class="table container">
+      <thead>
+
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table> 
+</div>
+            
 
                     
     </div>
 </body>
+<script src="index.js"></script>
 
 </html>
+
 
