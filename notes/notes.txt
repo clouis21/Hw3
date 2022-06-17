@@ -1,0 +1,29 @@
+the script was running b4 the html
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Log viewer function
+var number1 = b - a;
+var number2 = d - c;
+
+function generate(num, fn) {
+  var array = Array(num), i = 0;
+  while (i < num) array[i] = fn(i++);
+  return array;
+}
+
+var entry = (number1, number2) => `${number1 * number2}`;
+var array2d = generate(number1, row => generate(number2, col => entry(row + 1, col + 1)));
+var result = array2d.map(row => row.join(' | ')).join('\n');
+
+console.log(result);
