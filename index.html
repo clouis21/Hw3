@@ -20,98 +20,50 @@
               <p>
                 Initial, Plain Vanilla Version, where Errors Result in Default Values
               </p>
-                  
 
 
-                <!--Warning default value is still being used
-            <form class="form1" id="form1" action="" onsubmit="multiplyTable();return false">
-                  <p class="para">Please enter the table ranges</p> 
+        <form name="myForm" type="submit" action="" onsubmit="return false" > 
+             
+        <label for="a">First Column Number: </label>
+        <input type="text" name="a" id="a" value="2" placeholder="1st row value"  ><br>
+          <p id="para1"></p>
 
-                  <div class="labels">
+        <label for="b">Second Column number: </label>
+        <input type="text" name="b" id="b" value="5" placeholder="2nd column value"  ><br>
+        <p id="para2"></p>
 
-                        <label for="num1">First row number: </label>
-                        <input type="number" name="num1" id="num1" value="3" ></input>
+        <label for="c">First Row Number: </label>
+        <input type="text" name="c" id="c" value="3" placeholder="1st row value" ><br>
+        <p id="para3"></p>
 
-                        <label for="num2">Second row number: </label>
-                        <input type="number" name="num2" id="num2" value="9"></input>
+        <label for="d">Second Row Number: </label>
+        <input type="text" name="d" id="d" value="8" placeholder="2nd row value" ><br>
+        <p id="para"></p>
 
-                        <label for="num3">First row number: </label>
-                        <input type="number" name="num3" id="num3" value="2"></input>
-
-                        <label for="num4">First row number: </label>
-                        <input type="number" name="num4" id="num4" value="8"></input>
-
-                    <script>
-                        var clickBot = document.querySelector("#form1"),
-                          textValue = document.querySelector("#num1");
-                          clickBot.addEventListener("click", function() {
-                          alert(textValue.value);
-                          })
-                      </script>
-
-                  <input type="submit" id="submit" value="Submit"></input>
-                  <output name="result"></output>
-                </div>
-            </form>  
-
-
-            <form class="form1" id="form1" action="" onsubmit="multiplyTable();return false">
-
-              <input type="text" id="formValueId" name="valueId" />
-              <input type="button" id="theButton1"/>
-            
-              <input type="text" id="formValueId" name="valueId"/>
-              <input type="button" id="theButton2"/>
-
-                <input type="text" id="formValueId" name="valueId"/>
-                <input type="button" id="theButton3"/>
-
-                  <input type="text" id="formValueId" name="valueId"/>
-                  <input type="button" id="theButton4"/>
-
-                  <input type="submit" id="submit" value="Submit"></input>
-
-                  </form> -->
-
-                  
-                  
-<form action="" onsubmit="multiplyTable();return false">  
-  <label for="number">First Column Number: </label>
-   <input type="number" name="a" id="a" placeholder="1st row value" ><br>
-
-   <label for="number">Second Column number: </label>
-   <input type="number" name="b" id="b" placeholder="2nd column value" ><br>
-
-   <label for="number">First Row Number: </label>
-   <input type="number" name="c" id="c" placeholder="1st row value" ><br>
-
-   <label for="number">Second Row Number: </label>
-   <input type="number" name="d" id="d" placeholder="2nd row value"><br>
-
-  <button onclick="multiplyTable(document.getElementById('a').value,
-  document.getElementById('b').value,
-  document.getElementById('c').value,
-  document.getElementById('d').value)">Submit</button>
-</form> 
+        <button id="btn"  onclick="multiplyTable(
+            document.getElementById('a').value,
+            document.getElementById('b').value,
+            document.getElementById('c').value,
+             document.getElementById('d').value)" >Submit
+        </button>
+        </form>
+   
       
-
-<table id="myTable">
-  <div class="table container">
-      <thead>
-
-      </thead>
-      <tbody>
-
-      </tbody>
-    </table> 
-</div>
+      <div id="table-container">
+        
+      <table id="tbody">
+        <tbody>
+          
+        </tbody>
+      </table>
+      </div>
             
 
                     
     </div>
-</body>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 
+</body>
 </html>
 
 

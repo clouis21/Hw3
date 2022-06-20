@@ -1,13 +1,9 @@
-/*To do make tables*/
+To do make tables
 
-#wrapper{
-	display:flex;
-	grid--columns: 250px;
-}
 
 h2{
   width:100%;
-  overflow:hidden; /* contain floats */
+  overflow:hidden; 
   height:200px;
 }
 
@@ -34,7 +30,6 @@ th{
 }
 .myTable{
   background-color: rgb(224, 240, 192);
-  margin: 0px;
   
 
 }

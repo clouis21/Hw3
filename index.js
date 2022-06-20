@@ -1,109 +1,126 @@
 
-//Input value still takes default values. Need to update
-
-/*
-document.getElementById("myButton").onclick = function(){
-  var myValue = document.getElementById("myText").value;
-  console.log("This is the number", myValue)
-var num1 = parseInt(a);
-var num2 = parseInt(b);
-
-var num3 = parseInt(c);
-var num4 = parseInt(d);
-
-var a = prompt("Enter column first Value", "Insert Min Col");
-var b = prompt("Enter column second Value", "Insert Max Col");
-var c = prompt("Enter row first Value", "Insert Min Row");
-var d = prompt("Enterrow second Value", "Insert Max Row");
 
 
-const a = document.getElementById('num1').value;
-let b = document.getElementById('num2').value;
-var c = document.getElementById('num3').value;
-var d = document.getElementById('num4').value;
 
-var z = document.getElementById('num4');
 
-console.log(z);
-console.log(d);
 
-var button1 = document.getElementById("theButton1"),
-value =  button1.form.valueId.value;
-button1.onsubmit = function() {
-  multiplyTable1(value);
-}
-var button2 = document.getElementById("theButton2"),
-value =  button2.form.valueId.value;
-button2.onsubmit = function() {
-  multiplyTable1(value);
-}
-var button3 = document.getElementById("theButton3"),
-value =  button3.form.valueId.value;
-button3.onsubmit = function() {
-  multiplyTable1(value);
+function multiplyTable_1(a1,b1,c1,d1) {
+  var table1 = document.getElementsByTagName("TABLE")[0];
+
+  var descendants = document.getElementsByTagName('tbody')[0];//.getElementsByTagName("*");
+  console.log(descendants);
+  descendants.remove();
+
+  console.log(table1);
+  row = table1.insertRow(-1);
+  row.insertCell(-1).textContent=a1;
+  row.insertCell(-1).textContent=b1;
+  row = table1.insertRow(-1);
+  row.insertCell(-1).textContent=c1;
+  row.insertCell(-1).textContent=d1;
+  //divTabCont.append(table1.toString);
 }
 
-var button4 = document.getElementById("theButton4"),
-value =  button4.form.valueId.value;
-button4.onclick = function() {
-  multiplyTablex(value);
-}
-console.log(button4);
+    function multiplyTable(a1,b1,c1,d1) {
+      a1 = parseInt(a1);
+      b1 = parseInt(b1);
+      c1 = parseInt(c1);
+      d1 = parseInt(d1);
 
-function multiplyTablex(v){
+      var table1 = document.getElementsByTagName("TABLE")[0];
+     var para1 = document.getElementById("para");
+    // para1.innerHTML = "";
+    if(a1 > b1){
+      document.getElementById('para1').innerHTML = "First Column Number Greater Than Second";
+      document.getElementById("a").focus();
+      return;
+    }
+      if(a1 < -50 || a1 > 50){ 
+        document.getElementById('para1').innerHTML = "First Column Number Out of Bound";
+        document.getElementById("a").focus();
+        return;
+      }
+      if(b1 < -50 || b1 > 50){ 
+        document.getElementById('para2').innerHTML = "Second Column Number Out of Bound";
+        document.getElementById("b").focus();
+        return;
+      }
+      if(c1 > d1){
+        document.getElementById('para1').innerHTML = "First Column Number Greater Than Second";
+        document.getElementById("c").focus();
+        return;
+      }
+      if(c1 < -50 || c1 > 50){ 
+        document.getElementById('para3').innerHTML = "First Row Number Out of Bound";
+        document.getElementById("c").focus();
+        return;
+      }
+      if(d1 < -50 || d1 > 50){ 
+        document.getElementById('para4').innerHTML = "Second Row Number Out of Bound";
+        document.getElementById("d").focus();
+        return;
+      }
+      descendants = document.getElementsByTagName('tbody')[0];
+      console.log(descendants);
+      descendants.remove();
 
- console.log(v.value);
-}
+      console.log(d1.value);
+      console.log(d1);
+      console.log(table1);
+     
 
-multiplyTablex(button4)
-
-/*
-console.log(button1.value);
-console.log(button2);
-console.log(button3);
-console.log(button4);
-
-
-
-
-  console.log('HELOOOOO');
-
-}
-
-multiplyTable(button1,button2,button3, button4);
-console.log(document.getElementById('theButton1').value);
-
-
-console.log(button1.value);
-
-
-    function add(a, b, c, d) {
-      var sum = parseInt(a, 10) + parseInt(b, 10)
-       + parseInt(c, 10) + parseInt(d, 10);
-      alert(sum);
-    }*/
-  
-    function multiplyTable(a,b,c,d) {
-
-      tbody = document.querySelector('tbody');
-      result = '';
-      row = tbody.insertRow();
-      row.insertCell().textContent = '';//Leave first column empty
-      for (let y = c; y <= d; y++) {
-        
-        if (y === c) {
-          for (let x = a; x <= b; x++) {
-            row.insertCell().textContent = x;
-          }
+      console.log(table1);
+      row = table1.insertRow();
+      for (let y = c1; y <= d1; y++) {
+        if(y === c1 ){
+          row.insertCell().textContent='';
         }
-        row = tbody.insertRow();
-      
-        row.insertCell().textContent = y;
-        for (let x = a; x <= b; x++) {
-          row.insertCell().textContent = x * y;
+        row.insertCell().textContent=y;
+        
+      }
+      for (let x = a1; x <= b1; x++) {
+        row = table1.insertRow();
+        row.insertCell().textContent = x;
+        for(let y=c1; y<=d1; y++){
+          row.insertCell().textContent = x*y;
         }
       }
-    }
-    multiplyTable();
+      console.log(table1);
 
-    
+    }
+
+
+      
+
+
+
+
+
+
+
+
+
+    const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function handleClick(event) {
+  event.preventDefault();
+  const input1 = document.getElementById('a');
+  input1.value = '';
+});
+
+btn.addEventListener('click', function handleClick(event) {
+  event.preventDefault();
+  const input1 = document.getElementById('b');
+  input1.value = '';
+});
+btn.addEventListener('click', function handleClick(event) {
+  event.preventDefault();
+  const input1 = document.getElementById('c');
+  input1.value = '';
+});
+btn.addEventListener('click', function handleClick(event) {
+  event.preventDefault();
+  const input1 = document.getElementById('d');
+  input1.value = '';
+
+});
