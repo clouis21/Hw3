@@ -51,8 +51,11 @@ table, th, td {
   table-layout:fixed;
 }
 
-.formId{
-  float:left;
+label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+
 }
 
 .wrapper{
@@ -74,4 +77,9 @@ td:nth-child(1) {  background-color: black;
     border: 1px solid white;
   }
 
-
+#copyRight{
+  border: 1px black solid;
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+}
