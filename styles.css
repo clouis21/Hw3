@@ -59,3 +59,19 @@ table, th, td {
   display: flex;
   width: 100%;
 }
+tbody>:nth-child(1){
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+
+  
+}
+
+td:nth-child(1) {  background-color: black;
+  color: white }
+  table tbody tr:first-child td:nth-child(1) {
+    background-color: white;
+    border: 1px solid white;
+  }
+
+

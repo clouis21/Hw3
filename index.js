@@ -96,15 +96,7 @@ function multiplyTable_1(a1,b1,c1,d1) {
     multiplyTable(1,10,1,10)
 
 
-      
-
-
-
-
-
-
-
-
+//Clears previous value inputed from previous submit button.
 
     const btn = document.getElementById('btn');
 
