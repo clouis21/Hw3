@@ -12,55 +12,63 @@
 
 <body>
 <header>
-  <h2>Multiplication Table Generator, Version 1
+  <h2 class="header1">
+    Multiplication Table Generator, Version 1
   </h2>
+
+  <h5 class="header2">
+    Initial, Plain Vanilla Version, where Errors Result in Default Values
+  </h5>
 </header>
 
-  <div id="wrapper">              
-              <p>
-                Initial, Plain Vanilla Version, where Errors Result in Default Values
-              </p>
+  <div class="wrapper">  
 
+    <div id="formId">           
+              <p class="inpuPrompt">Please enter the table ranges</p>
 
-        <form name="myForm" type="submit" action="" onsubmit="return false" > 
+              <!--Form accepts four input from user then
+              inputs are passed on to each id elements a b c d.
+            Default values are preappend for generating table if user does not input new values -->
+
+          <form name="myForm" type="submit" action="" onsubmit="return false" > 
              
-        <label for="a">First Column Number: </label>
-        <input type="text" name="a" id="a" value="2" placeholder="1st row value"  ><br>
-          <p id="para1"></p>
+              <label for="a">First Column Number: </label>
+              <input type="text" name="a" id="a" value="2" placeholder="1st row value"  ><br>
+              <p id="para1"></p>
 
-        <label for="b">Second Column number: </label>
-        <input type="text" name="b" id="b" value="5" placeholder="2nd column value"  ><br>
-        <p id="para2"></p>
+              <label for="b">Second Column number: </label>
+              <input type="text" name="b" id="b" value="5" placeholder="2nd column value"  ><br>
+              <p id="para2"></p>
 
-        <label for="c">First Row Number: </label>
-        <input type="text" name="c" id="c" value="3" placeholder="1st row value" ><br>
-        <p id="para3"></p>
+              <label for="c">First Row Number: </label>
+              <input type="text" name="c" id="c" value="3" placeholder="1st row value" ><br>
+              <p id="para3"></p>
 
-        <label for="d">Second Row Number: </label>
-        <input type="text" name="d" id="d" value="8" placeholder="2nd row value" ><br>
-        <p id="para"></p>
+              <label for="d">Second Row Number: </label>
+              <input type="text" name="d" id="d" value="8" placeholder="2nd row value" ><br>
+              <p id="para"></p>
 
-        <button id="btn"  onclick="multiplyTable(
-            document.getElementById('a').value,
-            document.getElementById('b').value,
-            document.getElementById('c').value,
-             document.getElementById('d').value)" >Submit
-        </button>
-        </form>
-   
-      
-      <div id="table-container">
-        
-      <table id="tbody">
-        <tbody>
-          
-        </tbody>
-      </table>
-      </div>
+              <button id="btn"  onclick="multiplyTable(
+                  document.getElementById('a').value,
+                  document.getElementById('b').value,
+                  document.getElementById('c').value,
+                  document.getElementById('d').value)" >Regenerate
+              </button>
+          </form>
+     </div> 
+      <!-- Table div consist of just the table and its inner body -->
+     <div id="table-container">
             
+          <table>
+            <tbody>
+              
+            </tbody>
+          </table>
 
-                    
-    </div>
+     </div>
+                      
+  </div>
+  
     <script src="index.js"></script>
 
 </body>

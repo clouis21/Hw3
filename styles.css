@@ -1,42 +1,61 @@
-To do make tables
+/* paragraph and header styling */
+.header1{ 
+  color: blue;
+}
+.header2{
+  
+  color: blue;
+  font-size: 15px;
+}
+.inpuPrompt{
+  font-style: italic;
+  background-color: white;
+  position: absolute;
+  top: 11.5%;
+  right: 75%;
 
+}
+/* Allignes table and input form side by side and remove gap between cells.
+This also sets table max height and prevents over flow of table when values get excerssively too large */
+table{
+  display: flex;
+  border-collapse: collapse;
+  text-align: center;
+  height: 500px;
+  overflow-y: scroll;
 
-h2{
-  width:100%;
-  overflow:hidden; 
-  height:200px;
 }
 
-
+/* Higlights alternating rows */
 tr:nth-child(even) {  
   background-color:#51b39a;  
 }
 table, th, td {
   border: 1px solid black;
-
-
-}
-
-
-
-th{
-  border: black solid 2px;
-  color:blueviolet;
-  font-size: 22px;
-  padding: 22px;
-
-  text-transform: uppercase;
-  border-collapse: collapse;
-}
-.myTable{
-  background-color: rgb(224, 240, 192);
+  width: 950px;
   
 
+
+}
+/* Formatas table and form simultaniously to create even spacing and set border */
+#formId, #table-container{
+  padding: 1rem;
+  vertical-align: middle;
+  width: 50%;
+  margin: 22px;
+  border: 1px solid black;
+
 }
 
-tbody { display: block; 
-    height: 200px;
-    max-width: 950px;     
-    overflow-y: auto;    
-    overflow-x: auto;  
+#table-container{
+  table-layout:fixed;
+}
+
+.formId{
+  float:left;
+}
+
+.wrapper{
+  display: flex;
+  width: 100%;
 }
